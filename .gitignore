@@ -1,0 +1,14 @@
+# Java / Spring Boot
+**/target/
+*.class
+*.log
+**/application.properties
+
+# IDEs
+.idea/
+*.iml
+*.vscode/
+
+# Node / Angular
+**/node_modules/
+dist/

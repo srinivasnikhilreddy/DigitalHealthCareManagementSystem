@@ -1,0 +1,200 @@
+/* Header */
+.header {
+  width: 100%;
+  height: 60px;
+  background-color: #90E0EF;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Header left: search */
+.header-left .header-search {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+/* Header right: notifications and user */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.header-user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.username {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* Dashboard container */
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  padding-top: 60px; /* push content below header */
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  padding: 20px;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.15);
+  background-color: white;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li a {
+  color: blue;
+  text-decoration: none;
+  padding: 12px 20px;
+  display: block;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.sidebar ul li a:hover {
+  color: white;
+  background-color: #90E0EF;
+}
+
+.sidebar ul li a.active {
+  color: white;
+  background-color: #90E0EF/*90E0EF*/;
+}
+
+/* Main content */
+.content {
+  flex: 1;
+  padding: 30px;
+  color: #111827;
+  overflow-y: auto;
+}
+
+/* Title Block */
+.title-block {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 12px 18px;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  margin-bottom: 25px;
+}
+
+.title-inner {
+  border-left: 6px solid #16a34a;
+  padding-left: 14px;
+}
+
+.title-main {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+  color: green;
+}
+
+.title-sub {
+  font-size: 22px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* ====== Doctors Section Styling ====== */
+
+.doctor-section {
+  overflow: hidden;
+  position: relative;
+  height: 600px; /* Adjust visible height as needed */
+}
+
+/* Vertical scrolling container */
+.animate-scroll {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+  gap: 2rem;
+  animation: scroll-up 20s linear infinite;
+}
+
+/* Doctor card */
+.doctor-card {
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.doctor-card:hover {
+  transform: scale(1.05);
+}
+
+/* Doctor image */
+.doctor-card img {
+  width: 5cm;
+  height: 5cm;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #22c55e; /* Tailwind green-500 */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
+}
+
+/* Doctor name and specialization */
+.doctor-card .font-medium {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.doctor-card .text-gray-600 {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Scroll animation */
+@keyframes scroll-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+/* Pause scroll on hover */
+.doctor-section:hover .animate-scroll {
+  animation-play-state: paused;
+}

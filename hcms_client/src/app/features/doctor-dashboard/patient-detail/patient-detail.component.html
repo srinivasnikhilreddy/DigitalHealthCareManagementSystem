@@ -1,0 +1,20 @@
+<p>patient-detail works!</p>
+
+<h2 mat-dialog-title>Update Patient</h2>
+<form [formGroup]="updateForm" (ngSubmit)="save()">
+  <div class="grid grid-cols-2 gap-4">
+    <input type="text" placeholder="Username" formControlName="username" />
+    <input type="text" placeholder="First Name" formControlName="firstName" />
+    <input type="text" placeholder="Last Name" formControlName="lastName" />
+    <input type="email" placeholder="Email" formControlName="email" />
+    <input type="text" placeholder="Phone" formControlName="phone" />
+    <input type="text" placeholder="Gender" formControlName="gender" />
+    <input type="date" placeholder="DOB" formControlName="dateOfBirth" />
+    <input type="text" placeholder="Blood Group" formControlName="bloodGroup" />
+    <input type="text" placeholder="Medical History" formControlName="medicalHistory" />
+  </div>
+  <div class="mt-4 flex justify-end gap-2">
+    <button mat-raised-button color="primary" type="submit">Save</button>
+    <button mat-raised-button color="warn" type="button" (click)="close()">Cancel</button>
+  </div>
+</form>

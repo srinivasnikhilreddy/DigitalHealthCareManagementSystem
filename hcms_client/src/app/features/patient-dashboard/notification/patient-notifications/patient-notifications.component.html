@@ -1,0 +1,38 @@
+ <h2>Notifications</h2>
+
+    <!-- No Notifications -->
+    <div *ngIf="notifications.length === 0 && !error" class="no-notifications">
+      <svg viewBox="0 0 24 24"><path d="M13 16h-1v-4h-1m1-4h.01M21 12c0-4.97-4.03-9-9-9s-9 4.03-9 9c0 4.97 4.03 9 9 9s9-4.03 9-9zm-9 4h.01" /></svg>
+      <p>You have no notifications yet.</p>
+    </div>
+
+    <!-- Error Message -->
+    <div *ngIf="error" class="error-message">
+      {{ error }}
+    </div>
+
+    <!-- Notification List -->
+    <div class="notification-list">
+      <div *ngFor="let notif of notifications" class="notification-item">
+
+        <!-- Status Dot -->
+        <div class="status-dot" [ngClass]="{'new': !notif.sent, 'read': notif.sent}"></div>
+
+        <!-- Notification Content -->
+        <div class="notification-content">
+          <div class="notification-header">
+            <span class="notif-type">{{ notif.type }}</span>
+            <span *ngIf="!notif.sent" class="badge new">New</span>
+            <span *ngIf="notif.sent" class="badge read">Read</span>
+          </div>
+          <div class="notif-message">{{ notif.message }}</div>
+        </div>
+
+        <!-- Action Button -->
+        <div *ngIf="!notif.sent" class="action-btn">
+          <button (click)="markSent(notif)">Mark as Read</button>
+        </div>
+
+      </div>
+    </div>
+

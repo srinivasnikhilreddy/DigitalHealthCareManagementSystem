@@ -1,0 +1,63 @@
+<div class="report-container p-6 bg-white rounded shadow-md">
+  <h2 class="text-2xl font-bold mb-6">My Reports</h2>
+
+  <!-- Appointment Dropdown -->
+  <mat-form-field appearance="fill" class="w-full mb-6">
+    <mat-label>Select Appointment</mat-label>
+    <mat-select [(ngModel)]="selectedAppointmentId" (selectionChange)="onAppointmentChange()">
+      <mat-option *ngFor="let appt of appointments" [value]="appt.id">
+        {{ appt.appointmentDate | date:'mediumDate' }} - {{ appt.patientName }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- Reports Table -->
+  <div class="overflow-x-auto">
+    <table mat-table [dataSource]="reports" class="mat-elevation-z8 w-full">
+
+      <!-- ID Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let report"> {{report.id}} </td>
+      </ng-container>
+
+      <!-- Appointment ID Column -->
+      <ng-container matColumnDef="appointmentId">
+        <th mat-header-cell *matHeaderCellDef> Appointment </th>
+        <td mat-cell *matCellDef="let report"> {{report.appointmentId}} </td>
+      </ng-container>
+
+      <!-- Type Column -->
+      <ng-container matColumnDef="type">
+        <th mat-header-cell *matHeaderCellDef> Type </th>
+        <td mat-cell *matCellDef="let report"> {{report.type}} </td>
+      </ng-container>
+
+      <!-- Status Column -->
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef> Status </th>
+        <td mat-cell *matCellDef="let report">
+          <span [ngClass]="{
+            'text-green-600 font-semibold': report.status === 'DELIVERED',
+            'text-yellow-600 font-semibold': report.status === 'PENDING'
+          }">
+            {{report.status}}
+          </span>
+        </td>
+      </ng-container>
+
+      <!-- Report Data Column -->
+      <ng-container matColumnDef="reportData">
+        <th mat-header-cell *matHeaderCellDef> Report </th>
+        <td mat-cell *matCellDef="let report"> {{report.reportData || '-' }} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+
+  <div *ngIf="loading" class="mt-4 text-center text-gray-500">Loading...</div>
+  <div *ngIf="error" class="mt-4 text-center text-red-500">{{ error }}</div>
+  <div *ngIf="!loading && reports.length === 0" class="mt-4 text-center text-gray-500">No reports found.</div>
+</div>

@@ -1,0 +1,31 @@
+<div class="login-container">
+  <h3 style="margin-left: 60px;">Welcome to Digital HealthCare</h3>
+  <h2>Login</h2>
+
+  <p *ngIf="errorMessage" class="text-danger">{{ errorMessage }}</p>
+
+  <form [formGroup]="reactiveForm" (ngSubmit)="login()">
+
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input id="username" type="text" formControlName="username" style="width: 365px;">
+      <div *ngIf="reactiveForm.get('username')?.invalid && reactiveForm.get('username')?.touched" class="text-danger">
+        <span *ngIf="reactiveForm.get('username')?.errors?.['required']">Username is required.</span>
+        <span *ngIf="reactiveForm.get('username')?.errors?.['minlength']">Minimum 2 characters required.</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input id="password" type="password" formControlName="password" style="width: 365px;">
+      <div *ngIf="reactiveForm.get('password')?.invalid && reactiveForm.get('password')?.touched" class="text-danger">
+        <span *ngIf="reactiveForm.get('password')?.errors?.['required']">Password is required.</span>
+        <span *ngIf="reactiveForm.get('password')?.errors?.['minlength']">Minimum 5 characters required.</span>
+      </div>
+    </div>
+
+    <button type="submit" class="btn-login" [disabled]="submitting">Login</button>
+  </form>
+
+  <a routerLink="/register" class="back-link">Don't have an account? Register here</a>
+</div>

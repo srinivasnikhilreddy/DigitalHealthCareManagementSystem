@@ -1,0 +1,78 @@
+<!-- Header -->
+<div class="header flex justify-between items-center px-4 py-2 bg-white shadow-md">
+  <div class="header-left">
+    <input type="text" placeholder="Search..." class="header-search border rounded px-2 py-1">
+  </div>
+
+  <div class="header-right flex items-center gap-4">
+    <a routerLink="notification/patient-notifications" routerLinkActive="active" class="header-icon text-xl">🔔</a>
+    <div class="header-user flex items-center gap-2" style="margin-right: 50px">
+      <a routerLink="/profile" routerLinkActive="active">
+        <img *ngIf="profilePictureUrl" [src]="'http://localhost:9087' + profilePictureUrl" alt="User Avatar" class="avatar rounded-full">
+      </a>
+      <span class="username font-medium">{{ username }}</span>
+    </div>
+  </div>
+</div>
+
+<div class="dashboard-container flex">
+
+  <!-- Sidebar -->
+  <nav class="sidebar w-64 bg-gray-50 h-screen shadow-md p-4">
+    <h2 class="text-blue-600 text-lg font-bold mb-4">Menu</h2>
+    <ul class="space-y-2">
+      <li>
+        <a routerLink="/patient-dashboard" routerLinkActive="active"
+           [routerLinkActiveOptions]="{ exact: true }"
+           class="sidebar-link block px-2 py-1 rounded hover:bg-blue-100">Dashboard</a>
+      </li>
+      <li>
+        <a routerLink="doctor-list" routerLinkActive="active"
+           class="sidebar-link block px-2 py-1 rounded hover:bg-blue-100">Doctors</a>
+      </li>
+      <li>
+        <a routerLink="payment/payment-list" routerLinkActive="active"
+           class="sidebar-link block px-2 py-1 rounded hover:bg-blue-100">Payments</a>
+      </li>
+      <li>
+        <a routerLink="report/report-detail" routerLinkActive="active"
+           class="sidebar-link block px-2 py-1 rounded hover:bg-blue-100">Reports</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Main content -->
+  <div class="content flex-1 p-6">
+
+    <!-- Title block (only on dashboard) -->
+    <div *ngIf="showTitle" class="title-block mb-6 text-center">
+      <div class="title-main text-3xl font-bold text-green-600">Digital Health Care</div>
+      <div class="title-sub text-xl text-gray-800">Management System</div>
+      <h3 style="margin-left: 400px;">Available Doctors</h3>
+    </div>
+
+    <div *ngIf="showTitle && doctors && doctors.length > 0" class="mb-6 doctor-section">
+
+      <div class="animate-scroll">
+        <!-- Loop through doctors -->
+        <div *ngFor="let doctor of doctors" class="doctor-card">
+          <img [src]="'http://localhost:9087' + doctor.profilePictureUrl"
+               alt="{{ doctor.firstName }}">
+          <div class="font-medium">{{ doctor.firstName }} {{ doctor.lastName }}</div>
+          <div class="text-gray-600">{{ doctor.specialization }}</div>
+        </div>
+
+        <!-- Duplicate list for infinite loop -->
+        <div *ngFor="let doctor of doctors" class="doctor-card">
+          <img [src]="'http://localhost:9087' + doctor.profilePictureUrl"
+               alt="{{ doctor.firstName }}">
+          <div class="font-medium">{{ doctor.firstName }} {{ doctor.lastName }}</div>
+          <div class="text-gray-600">{{ doctor.specialization }}</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Router outlet for child components -->
+    <router-outlet></router-outlet>
+  </div>
+</div>

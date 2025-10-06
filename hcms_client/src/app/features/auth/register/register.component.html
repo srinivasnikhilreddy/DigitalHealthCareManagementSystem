@@ -1,0 +1,135 @@
+<div class="register-container">
+  <h2>Register</h2>
+
+  <p *ngIf="errorMessage" class="text-danger">{{ errorMessage }}</p>
+  <p *ngIf="successMessage" class="text-success">{{ successMessage }}</p>
+
+  <form [formGroup]="reactiveForm" (ngSubmit)="register()">
+
+    <!-- Username & Email -->
+    <div class="two-column">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input id="username" type="text" formControlName="username" style="width: 360px;">
+        <div *ngIf="reactiveForm.get('username')?.invalid && reactiveForm.get('username')?.touched"
+             class="text-danger">
+          <span *ngIf="reactiveForm.get('username')?.errors?.['required']">Username is required.</span>
+          <span *ngIf="reactiveForm.get('username')?.errors?.['minlength']">Minimum 2 characters required.</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" type="email" formControlName="email" style="width: 370px;">
+        <div *ngIf="reactiveForm.get('email')?.invalid && reactiveForm.get('email')?.touched"
+             class="text-danger">
+          <span *ngIf="reactiveForm.get('email')?.errors?.['required']">Email is required.</span>
+          <span *ngIf="reactiveForm.get('email')?.errors?.['email']">Invalid email format.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Password -->
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input id="password" type="password" formControlName="password" style="width: 780px;">
+      <div *ngIf="reactiveForm.get('password')?.invalid && reactiveForm.get('password')?.touched"
+           class="text-danger">
+        <span *ngIf="reactiveForm.get('password')?.errors?.['required']">Password is required.</span>
+        <span *ngIf="reactiveForm.get('password')?.errors?.['minlength']">Minimum 5 characters required.</span>
+      </div>
+    </div>
+
+    <!-- Roles -->
+    <div class="form-group">
+      <label for="roles">Roles</label>
+      <select id="roles" formControlName="roles" multiple style="width: 812px;">
+        <option value="PATIENT">PATIENT</option>
+        <option value="DOCTOR">DOCTOR</option>
+        <option value="ADMIN">ADMIN</option>
+      </select>
+      <div *ngIf="reactiveForm.get('roles')?.invalid && reactiveForm.get('roles')?.touched" class="text-danger">
+        Select at least one role.
+      </div>
+    </div>
+
+    <!-- Personal Info -->
+    <div class="two-column">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input id="firstName" type="text" formControlName="firstName" style="width: 360px;">
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input id="lastName" type="text" formControlName="lastName" style="width: 370px;">
+      </div>
+    </div>
+
+    <div class="two-column">
+      <div class="form-group">
+        <label for="gender">Gender</label>
+        <select id="gender" formControlName="gender" >
+          <option value="MALE">Male</option>
+          <option value="FEMALE">Female</option>
+          <option value="OTHER">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="dateOfBirth">Date of Birth</label>
+        <input id="dateOfBirth" type="date" formControlName="dateOfBirth" style="width: 370px;">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input id="phone" type="text" formControlName="phone" style="width: 780px;">
+    </div>
+    <div class="form-group">
+      <label for="address">Address</label>
+      <textarea id="address" formControlName="address" style="width: 780px;"></textarea>
+    </div>
+
+    <!-- Doctor-specific -->
+    <div *ngIf="(reactiveForm.get('roles')?.value ?? []).includes('DOCTOR')">
+      <h3 class="section-heading">Doctor Details</h3>
+      <div class="form-group">
+        <label for="specialization">Specialization</label>
+        <input id="specialization" type="text" formControlName="specialization" style="width: 780px;">
+      </div>
+      <div class="form-group">
+        <label for="licenseNumber">License Number</label>
+        <input id="licenseNumber" type="text" formControlName="licenseNumber" style="width: 780px;">
+      </div>
+      <div class="form-group">
+        <label for="experienceYears">Experience (Years)</label>
+        <input id="experienceYears" type="number" formControlName="experienceYears" style="width: 780px;">
+      </div>
+    </div>
+
+    <!-- Patient-specific -->
+    <div *ngIf="(reactiveForm.get('roles')?.value ?? []).includes('PATIENT')">
+      <h3 class="section-heading">Patient Details</h3>
+      <div class="form-group">
+        <label for="bloodGroup">Blood Group</label>
+        <input id="bloodGroup" type="text" formControlName="bloodGroup" style="width: 780px;">
+      </div>
+      <div class="form-group">
+        <label for="medicalHistory">Medical History</label>
+        <textarea id="medicalHistory" formControlName="medicalHistory" style="width: 780px;"></textarea>
+      </div>
+    </div>
+
+    <!-- Profile Picture -->
+    <div class="form-group">
+      <label for="profilePicture">Profile Picture</label>
+      <input id="profilePicture" type="file" (change)="onFileSelected($event)" accept="image/*">
+    </div>
+
+    <!-- Register Button -->
+    <div class="form-group" style="margin-top: 1.5rem;">
+      <button type="submit" class="btn-register" [disabled]="submitting">Register</button>
+    </div>
+
+    <a routerLink="/login" class="back-link">Back to Login</a>
+  </form>
+</div>

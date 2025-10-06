@@ -1,0 +1,99 @@
+/* Container */
+.login-container {
+  max-width: 400px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Heading */
+.login-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 2rem;
+}
+
+/* Feedback messages */
+.text-danger {
+  color: #dc2626;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+/* Form groups */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #555555;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #22c55e;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
+  outline: none;
+}
+
+/* Error messages */
+.form-group .text-danger {
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-login {
+  background-color: #22c55e;
+  color: white;
+}
+
+.btn-login:hover {
+  background-color: #16a34a;
+}
+
+/* Links */
+.back-link {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  color: #22c55e;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
