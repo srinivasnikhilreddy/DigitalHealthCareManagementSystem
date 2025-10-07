@@ -68,25 +68,24 @@ Below is the architecture of the **Digital HealthCare Management System**, showi
 
 
 ## 📸 Screenshots (UI)
-### Register page
+### Register page -> Doctor - Patient
 <div style="display: flex; gap: 10px;">
-
   <img src="https://github.com/user-attachments/assets/63bf2f98-e2b0-4b9a-916e-21227ad9c71a" width="48%" alt="Architecture 1" />
-  
   <img  src="https://github.com/user-attachments/assets/3b330ff6-42f7-40f1-a461-9fff291d5c5d" width="48%" alt="Architecture 2" />
-
 </div>
 
 
-### Login page                                   ### Login page
+### Login page -> Doctor - Patient
 <div style="display: flex; gap: 10px;">
   <img src="https://github.com/user-attachments/assets/37e1416a-a6d1-46b9-87eb-85eed8885470" width="48%" alt="Architecture 1" />
   <img src="https://github.com/user-attachments/assets/a08a55c9-defa-4c7d-9294-5aef9c205426" width="48%" alt="Architecture 2" />
 </div>
 
 
-### Doctor Dashboard
-<img width="1366" height="768" alt="Screenshot (454)" src="https://github.com/user-attachments/assets/470234d0-9ca6-4b4e-b042-3c25d12e83ea" />
-
+### Dashboard -> Doctor - Patient
+<div style="display: flex; gap: 10px;">
+  <img src="https://github.com/user-attachments/assets/470234d0-9ca6-4b4e-b042-3c25d12e83ea" width="48%" alt="Architecture 1" />
+  <img src="https://github.com/user-attachments/assets/c633c6dc-65da-4efe-afd8-3d4aeeff01e4" width="48%" alt="Architecture 2" />
+</div>
 
 
