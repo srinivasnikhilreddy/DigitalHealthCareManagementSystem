@@ -75,10 +75,16 @@ Below is the architecture of the **Digital HealthCare Management System**, showi
 </div>
 
 
-### Login page -> Doctor - Patient
+### Login page
 <div style="display: flex; gap: 10px;">
-  <img src="https://github.com/user-attachments/assets/37e1416a-a6d1-46b9-87eb-85eed8885470" width="48%" alt="Architecture 1" />
-  <img src="https://github.com/user-attachments/assets/a08a55c9-defa-4c7d-9294-5aef9c205426" width="48%" alt="Architecture 2" />
+  <div style="text-align: center; width: 48%;">
+    <p>Doctor</p>
+    <img src="https://github.com/user-attachments/assets/37e1416a-a6d1-46b9-87eb-85eed8885470" width="100%" alt="Doctor Login" />
+  </div>
+  <div style="text-align: center; width: 48%;">
+    <p>Patient</p>
+    <img src="https://github.com/user-attachments/assets/a08a55c9-defa-4c7d-9294-5aef9c205426" width="100%" alt="Patient Login" />
+  </div>
 </div>
 
 
