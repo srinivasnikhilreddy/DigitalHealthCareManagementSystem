@@ -41,9 +41,17 @@ Below is the architecture of the **Digital HealthCare Management System**, showi
 <img width="964" height="474" alt="Image" src="https://github.com/user-attachments/assets/6047bb2e-aca8-43b1-a919-fdc89126afe4" />
 
 ---
-## Start Zookeeper
+## ⚙️ Setup
+### Start Zookeeper
 <img width="964" height="474" alt="start zookeeper" src="https://github.com/user-attachments/assets/107b6455-20fc-434b-bad8-0e4eb6439598" />
 
+
+### Start Kafka
+<img width="1366" height="768" alt="start kafka" src="https://github.com/user-attachments/assets/cfc8d9c3-46c3-46a9-949c-11df178b8378" />
+
+
+### list of created topics
+<img width="1366" height="768" alt="list kafka topics" src="https://github.com/user-attachments/assets/e37b762d-67a7-48b5-81ac-9662d5ec429e" />
 
 
 
