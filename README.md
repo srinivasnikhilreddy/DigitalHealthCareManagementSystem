@@ -91,8 +91,12 @@ Below is the architecture of the **Digital HealthCare Management System**, showi
 
 ### Appointments (Doctor)
 <img width="964" height="474" alt="Screenshot (465)" src="https://github.com/user-attachments/assets/e881b3f7-f582-4c1b-8769-9d577d4a6163" />
+
+
 ### Patients (Doctor)
 <img width="964" height="474" alt="Screenshot (466)" src="https://github.com/user-attachments/assets/0045ddc1-17fb-47b1-a24d-d21dbe83356a" />
+
+
 ### Reports (Doctor)
 <img width="964" height="474" alt="Screenshot (467)" src="https://github.com/user-attachments/assets/908ee9d9-76b5-4585-b856-850d7d320d5f" />
 
@@ -122,16 +126,28 @@ Below is the architecture of the **Digital HealthCare Management System**, showi
 ## 🛢 Database (SSMS)
 ### Users
 <img width="964" height="474" alt="Screenshot (469)" src="https://github.com/user-attachments/assets/01391573-833b-499d-a6cc-e533a40dc590" />
+
+
 ### User Roles
 <img width="964" height="474" alt="Screenshot (476)" src="https://github.com/user-attachments/assets/5b70baf7-2222-4d37-a786-60ff9a46d0da" />
+
+
 ### Reports
 <img width="964" height="474" alt="Screenshot (477)" src="https://github.com/user-attachments/assets/b4fdb056-b367-45ae-a818-88642830e6c9" />
+
+
 ### Refresh Tokens
 <img width="1366" height="768" alt="Screenshot (478)" src="https://github.com/user-attachments/assets/f80132ff-cbd1-46d6-bdb3-7e4b1eda7dae" />
+
+
 ### Payments
 <img width="1366" height="768" alt="Screenshot (473)" src="https://github.com/user-attachments/assets/897330ff-6347-4253-acf7-9b2c4ce4afe4" />
+
+
 ### Notifications
 <img width="1366" height="768" alt="Screenshot (474)" src="https://github.com/user-attachments/assets/f13feef2-8bc6-4db2-abab-e9934a040782" />
+
+
 ### Appointments
 <img width="1366" height="768" alt="Screenshot (475)" src="https://github.com/user-attachments/assets/0f82397b-b586-4d58-bf40-2c42fea9c5e6" />
 
