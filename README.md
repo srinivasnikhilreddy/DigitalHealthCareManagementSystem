@@ -103,8 +103,12 @@ Below is the architecture of the **Digital HealthCare Management System**, showi
 
 ### Doctors (Patient)
 <img width="964" height="474" alt="Screenshot (458)" src="https://github.com/user-attachments/assets/33301f87-1062-48d6-997e-96f0f2a34797" />
+
+
 ### Payments (Patient)
 <img width="964" height="474" alt="Screenshot (459)" src="https://github.com/user-attachments/assets/12a2892d-348b-46ef-8bb5-cf7c9a60ffa8" />
+
+
 ### Reports (Patient)
 <img width="964" height="474" alt="Screenshot (460)" src="https://github.com/user-attachments/assets/105a542d-40e4-493d-aabf-af443dde81e7" />
 
