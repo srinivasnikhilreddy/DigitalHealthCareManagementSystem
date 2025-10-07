@@ -41,7 +41,8 @@ Below is the architecture of the **Digital HealthCare Management System**, showi
 <img width="964" height="474" alt="Image" src="https://github.com/user-attachments/assets/6047bb2e-aca8-43b1-a919-fdc89126afe4" />
 
 ---
-<img width="1366" height="768" alt="start zookeeper" src="https://github.com/user-attachments/assets/107b6455-20fc-434b-bad8-0e4eb6439598" />
+## Start Zookeeper
+<img width="964" height="474" alt="start zookeeper" src="https://github.com/user-attachments/assets/107b6455-20fc-434b-bad8-0e4eb6439598" />
 
 
 
