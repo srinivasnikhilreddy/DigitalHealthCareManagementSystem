@@ -34,6 +34,11 @@ This system integrates **Angular frontend**, **Spring Boot microservices**, **MS
 **Services:** Appointments, Payments, Reports, Notifications, Users, Doctors, Patients  
 
 ---
+## 🏗 System Architecture
+
+Below is the architecture of the **Digital HealthCare Management System**, showing how the microservices interact with the frontend, database, and Kafka/Zookeeper messaging system.
+
+![System Architecture](path/to/architecture-image.png)
 
 
 
