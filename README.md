@@ -76,7 +76,7 @@ Below is the architecture of the **Digital HealthCare Management System**, showi
 
 
 ### Login page
-<div style="display: flex; gap: 10px;">
+<div style="display: flex; gap: 10px; align-items: flex-start;">
   <div style="text-align: center; width: 48%;">
     <p>Doctor</p>
     <img src="https://github.com/user-attachments/assets/37e1416a-a6d1-46b9-87eb-85eed8885470" width="100%" alt="Doctor Login" />
