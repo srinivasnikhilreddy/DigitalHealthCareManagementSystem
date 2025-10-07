@@ -50,8 +50,41 @@ Below is the architecture of the **Digital HealthCare Management System**, showi
 <img width="1366" height="768" alt="start kafka" src="https://github.com/user-attachments/assets/cfc8d9c3-46c3-46a9-949c-11df178b8378" />
 
 
-### list of created topics
+### List of created topics
 <img width="1366" height="768" alt="list kafka topics" src="https://github.com/user-attachments/assets/e37b762d-67a7-48b5-81ac-9662d5ec429e" />
+
+
+## 🧪 Testing JWT Authentication (Postman tool)
+### Register 
+<img width="1366" height="768" alt="register" src="https://github.com/user-attachments/assets/47933841-089c-490c-8e33-ce04bc4d8fa4" />
+
+
+### Login
+<img width="1366" height="768" alt="login" src="https://github.com/user-attachments/assets/bf639747-9577-4f01-a4a0-0cd6bd634766" />
+
+
+### User(Patient) Access
+<img width="1366" height="768" alt="test" src="https://github.com/user-attachments/assets/ba9839bd-50b5-4240-bb90-15c11af26a28" />
+
+
+## 📸 Screenshots (UI)
+### Register page
+<img width="1366" height="768" alt="Screenshot (452)" src="https://github.com/user-attachments/assets/63bf2f98-e2b0-4b9a-916e-21227ad9c71a" />
+<img width="1366" height="768" alt="Screenshot (455)" src="https://github.com/user-attachments/assets/3b330ff6-42f7-40f1-a461-9fff291d5c5d" />
+
+
+### Login page
+<div style="display: flex; gap: 10px;">
+
+  <img src="https://github.com/user-attachments/assets/37e1416a-a6d1-46b9-87eb-85eed8885470" width="48%" alt="Architecture 1" />
+  
+  <img src="https://github.com/user-attachments/assets/a08a55c9-defa-4c7d-9294-5aef9c205426" width="48%" alt="Architecture 2" />
+
+</div>
+
+
+### Doctor Dashboard
+<img width="1366" height="768" alt="Screenshot (454)" src="https://github.com/user-attachments/assets/470234d0-9ca6-4b4e-b042-3c25d12e83ea" />
 
 
 
